@@ -37,7 +37,7 @@ check("password","password with 6 or more Characters Required").isLength({min:6}
             secure:process.env.NODE_ENV ==="production",
             maxAge:86400000
         })
-        return res.sendStatus(200)
+        return res.status(200).send({message:"User registered OK"})
     }
     catch (error) {
         console.log("error", error);
